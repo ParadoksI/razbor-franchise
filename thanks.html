@@ -49,8 +49,66 @@
 
 <body>
     <div class="wrapper">
+        <style>
+            .header-image {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 20%;
+                transform: translateX(-50%);
+                z-index: -100;
+                margin-top: -30px;
+            }
+
+            .header-image2 {
+                width: 100%;
+                /* Устанавливает ширину изображения на 100% ширины родительского элемента */
+                position: fixed;
+                /* Фиксирует изображение на экране */
+                top: 0;
+                /* Размещает изображение вверху страницы */
+                left: 80%;
+                /* Выравнивает изображение по горизонтали */
+                transform: translateX(-50%);
+                /* Сдвигает изображение на 50% его ширины влево, для центрирования */
+                z-index: -100;
+                /* Устанавливает изображение поверх других элементов */
+            }
+        </style>
+        <svg width="659" height="437" class="header-image" viewBox="0 0 659 437" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_f_248_433)">
+            <path
+                d="M70.3149 -609.224C26.7454 -298.146 246.341 -251.503 448.796 -84.3662L532.203 310.186C388.747 283.378 28.5529 168.371 -264.581 -77.195C-557.715 -322.761 -407.179 -566.503 -295.269 -657.678C-158.885 -745.219 105.17 -858.087 70.3149 -609.224Z"
+                fill="#00FFFF" fill-opacity="0.5" />
+        </g>
+        <defs>
+            <filter id="filter0_f_248_433" x="-560.968" y="-886.72" width="1219.17" height="1322.91"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feGaussianBlur stdDeviation="63" result="effect1_foregroundBlur_248_433" />
+            </filter>
+        </defs>
+    </svg>
+        <svg width="1000" height="1056" class="header-image2" viewBox="0 0 1000 1056" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_f_248_434)">
+                <path
+                    d="M613.805 68.503C558.186 471.609 763.148 521.494 946.317 727.533L1006.57 1232.33C872.508 1204.47 538.114 1073 273.07 770.079C8.02746 467.156 161.403 145.873 271.221 23.0974C403.955 -96.136 658.301 -253.982 613.805 68.503Z"
+                    fill="#00FFFF" fill-opacity="0.5" />
+            </g>
+            <defs>
+                <filter id="filter0_f_248_434" x="0.235474" y="-248.407" width="1132.34" height="1606.74"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="63" result="effect1_foregroundBlur_248_434" />
+                </filter>
+            </defs>
+        </svg>
         <div class="content__man">
-            <p class="content__title__thanks">Бизнес-маркет</p>
+           
             <!--- <div class="d-none-mob livet livet1"><img src="img/blur.png" loading="lazy" alt=""></div>--->
             <!-- <div class="d-none-mob livet livet2"><img src="img/blur2.png" loading="lazy" alt=""></div>-->
             <div class="img-rel">
@@ -74,10 +132,11 @@
             <div class="info__inner">
                 
             </div>
-            <button type="button" class="btn-2 telegram-btn" onclick="submitForm('Telegram')">
+            <button type="button" class="btn-2 telegram-btn" onclick="openTelegram()">
                 <img class="telegram" src="img/telegram.png" alt="">Telegram
             </button>
         </div>
         
     </div>
+    <script src="./razbor/js/thanks.js"></script>
 </body>
