@@ -295,6 +295,10 @@
         line-height: 101%;
     }
 
+    .header__title__p { 
+        width: 50%;
+    }
+
     .content__man {
         position: absolute;
         /*right: 252px;*/
@@ -309,6 +313,7 @@
     .content__man .man-img {
         width: 475px;
         margin-left: -20px;
+        margin-bottom: -50px;
     }
 
     .player-man {
@@ -329,8 +334,26 @@
 
     }
 
+    .modal {
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        top: 40%;
+        left: 5%;
+        
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+    }
+
+    .modal-content {
+        width: 350px;
+        height: 200px;
+        background-color: #fff;
+        text-align: center;
+    }
+
     .content__btn {
-        margin-top: 15px;
+        
         display: flex;
         justify-content: space-between;
     }
@@ -411,7 +434,7 @@
         display: flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: center;
+        align-items: flex-start;
     }
 
     #timer #left {
@@ -750,12 +773,15 @@
         margin-top: -16px;
         position: relative;
         overflow: hidden;
-        border-radius: 0px 0px 50px 50px;
+        border-radius: 0px 0px 50% 50%;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .people__item__img {
-        width: 100%;
-        margin-bottom: 5px;
+        width: auto;
+        
         position: relative;
 
 
@@ -763,21 +789,34 @@
 
     }
 
+    .evg { 
+        scale: 1.5;
+    }
+
+    .Aidos { 
+        scale: 1.25;
+    }
+
     .people__item__disc {
         margin-top: 10px;
         font-family: 'Inter';
         display: flex;
         flex-direction: column;
-        gap: 15px;
+
+        gap: 5px;
     }
 
     .people__item__disc div {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 600;
     }
 
     .people__item__disc p {
-        font-size: 10px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .people__item__disc span { 
         font-weight: 300;
     }
 
@@ -1117,6 +1156,24 @@
         top: 150px;
         left: -30px;
         background-size: cover;
+    }
+
+    .modal {
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        top: 33%;
+        left: 3%;
+        
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+    }
+
+    .modal-content {
+        width: 250px;
+        height: 150px;
+        background-color: #fff;
+        text-align: center;
     }
 
     .content__text p {
@@ -1727,12 +1784,15 @@
         margin-top: -16px;
         position: relative;
         overflow: hidden;
-        border-radius: 0px 0px 50px 50px;
+        border-radius: 0px 0px 50% 50%;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .people__item__img {
-        width: 100%;
-        margin-bottom: 5px;
+        width: auto;
+        
         position: relative;
 
 
@@ -1740,21 +1800,33 @@
 
     }
 
+    .evg { 
+        scale: 1.5;
+    }
+
+    .Aidos { 
+        scale: 1.25;
+    }
+
     .people__item__disc {
         margin-top: 10px;
         font-family: 'Inter';
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
     }
 
     .people__item__disc div {
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 600;
     }
 
     .people__item__disc p {
         font-size: 10px;
+        font-weight: 300;
+    }
+
+    .people__item__disc span { 
         font-weight: 300;
     }
 
@@ -1781,51 +1853,17 @@
 
     }
 
-    .people__cont {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        width: 132px;
-        height: 132px;
-        z-index: 1;
-        background-color: #000;
-        border-radius: 50%;
-    }
-
-    .people__mask {
-        margin-top: -16px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 0px 0px 50px 50px;
-    }
-
-    .people__item__img {
-        width: 100%;
-        margin-bottom: 5px;
-        position: relative;
-
-
-        z-index: 2;
-
-    }
+    
 
     .people__item__disc {
         margin-top: 10px;
         font-family: 'Inter';
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
     }
 
-    .people__item__disc div {
-        font-size: 12px;
-        font-weight: 600;
-    }
-
-    .people__item__disc p {
-        font-size: 10px;
-        font-weight: 300;
-    }
+    
 
     footer {
         margin-top: 30px;
@@ -2170,6 +2208,7 @@ form .phone {
     border-radius: 8px;
     color: white;
     margin-right: 20px !important;
+    font-size: 15px;
 }
 
 .iti__country {
@@ -2297,11 +2336,11 @@ form .phone {
 }
 
 .bonus-container {
-    max-width: 400px;
+    width: 100%;
     color: #fff;
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    
     align-items: center;
     border-radius: 10px;
 }
@@ -2313,11 +2352,22 @@ form .phone {
     margin-right: 40px;
 }
 
-.bonus-remaining {
-    margin-right: 15px;
-    color: #B8B8B8;
-    font-family: 'Inter';
-    font-weight: 300;
+@media screen and (min-width:993px) {
+    .bonus-remaining {
+        margin-right: 15px;
+        color: #B8B8B8;
+        font-family: 'Inter';
+        font-weight: 300;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .bonus-remaining {
+        
+        color: #B8B8B8;
+        font-family: 'Inter';
+        font-weight: 300;
+    }
 }
 
 .bonus-remaining strong {
@@ -2335,6 +2385,9 @@ form .phone {
     font-family: 'Inter';
     font-size: 16px;
     font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .bonus-price .skidka {
@@ -2464,7 +2517,7 @@ form .phone {
 
     .bonus-price,
     .bonus-remaining {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .bonus-remaining strong {
@@ -2474,7 +2527,7 @@ form .phone {
 
     .bonus-titles {
 
-        margin-right: 30px;
+        margin-right: 0 !important;
     }
 
     .bonus-remaining {
