@@ -48,7 +48,7 @@
     body {
         background-color: #0B0B0D;
         color: white;
-        font-family: "GilroyLight", sans-serif;
+        font-family: "PP Neue Montreal Book";
         position: relative;
         overflow-x: hidden;
     }
@@ -64,7 +64,7 @@
         margin-top: 7px;
     }
 
-    #headerD {
+    #header {
         font-size: 30px;
     }
 
@@ -895,7 +895,7 @@
     body {
         background-color: #0B0B0D;
         color: white;
-        font-family: "GilroyLight", sans-serif;
+        font-family: "PP Neue Montreal Book";
         position: relative;
     }
 
@@ -904,6 +904,7 @@
         background-color: #0B0B0D;
         overflow: hidden;
     }
+    
 
 
 
